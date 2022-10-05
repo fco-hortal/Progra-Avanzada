@@ -1,0 +1,100 @@
+// Input: a.b (a and b are binary numbers of same length)
+// Ouput: True(is a min binary heap) or False(not a min binary heap)
+// Example: 0100.1000.1111 outputs True
+//
+// Min Binary Heap Algorithm
+// for Turing Machine Simulator 
+// turingmachinesimulator.com
+// By Francisco Hortal
+
+name: Min Binary Heap
+init: q0
+accept: qAccepted
+
+
+q0,0,_
+q0,0,_,>,-
+
+q0,1,_
+q0,1,_,>,-
+
+q0,.,_
+q1,_,_,>,-
+
+q0,_,_
+qAccepted,_,_,-,-
+
+q1,0,_
+q1,_,0,>,>
+
+q1,1,_
+q1,_,1,>,>
+
+q1,.,_
+q1,_,.,>,>
+
+q1,_,_
+q2,_,_,<,<
+
+q2,_,1
+q2,_,1,<,<
+
+q2,_,0
+q2,_,0,<,<
+
+q2,_,.
+q2,_,.,<,<
+
+q2,_,_
+q3,_,_,<,>
+
+q3,1,0
+q3,1,0,<,-
+
+q3,1,1
+q3,1,1,<,-
+
+q3,0,1
+q3,0,1,<,-
+
+q3,0,0
+q3,0,0,<,-
+
+q3,_,1
+q4,_,1,>,-
+
+q3,_,0
+q4,_,0,>,-
+
+q4,1,1
+q4,1,_,>,>
+
+q4,0,1
+q5,1,_,>,>
+
+q4,0,0
+q4,0,_,>,>
+
+q4,_,.
+q3,_,_,<,>
+
+q4,_,_
+qAccepted,_,_,-,-
+
+q5,1,1
+q5,1,_,>,>
+
+q5,0,1
+q5,1,_,>,>
+
+q5,1,0
+q5,0,_,>,>
+
+q5,0,0
+q5,0,_,>,>
+
+q5,_,.
+q3,_,_,<,>
+
+q5,_,_
+qAccepted,_,_,-,-
